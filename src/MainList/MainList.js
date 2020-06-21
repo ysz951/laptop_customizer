@@ -8,27 +8,23 @@ class MainList extends Component {
    
     
     render() {
-        
+      const {features, USCurrencyFormat, selected, handleUpdate} = this.props;
       return (
         <main>
             <MainForm
-                features = {this.props.features}
-                USCurrencyFormat = {this.props.USCurrencyFormat}
-                selected = {this.props.selected}
-                handleUpdate = {this.props.handleUpdate}
+                features = {features}
+                USCurrencyFormat = {USCurrencyFormat}
+                selected = {selected}
+                handleUpdate = {handleUpdate}
             />
             <MainSummary
-                USCurrencyFormat = {this.props.USCurrencyFormat}
-                selected = {this.props.selected} 
+                USCurrencyFormat = {USCurrencyFormat}
+                selected = {selected} 
             />
         </main>
       );
     }
   }
-  
-  MainList.defaultProps = {
-
-  };
   
   
   export default MainList;

@@ -1,33 +1,20 @@
 import React, { Component } from 'react';
 import SummaryTotal from '../SummaryTotal/SummaryTotal';
-import SummaryOption from '../SummaryOption/SummaryOption'
-
+import SummaryOptionList from '../SummaryOptionList/SummaryOptionList'
 class MainSummary extends Component {
-   
     
     render() {
-        const {USCurrencyFormat} = this.props;
-        const summary = Object.keys(this.props.selected).map((feature, idx) => {
-            const featureHash = feature + '-' + idx;
-            const selectedOption = this.props.selected[feature];
-            return (
-            <SummaryOption
-                 key={featureHash}
-                 feature = {feature} 
-                 selectedName = {selectedOption.name}
-                 cost = {USCurrencyFormat.format(selectedOption.cost)}
-                
-            />
-            );
-        });
-
+        const {USCurrencyFormat, selected} = this.props;
         return (
             <section className="main__summary">
                 <h2>Your cart</h2>
-                {summary}
+                <SummaryOptionList 
+                    USCurrencyFormat = {USCurrencyFormat}
+                    selected = {selected}
+                />
                 <SummaryTotal 
-                    USCurrencyFormat = {this.props.USCurrencyFormat}
-                    selected = {this.props.selected} 
+                    USCurrencyFormat = {USCurrencyFormat}
+                    selected = {selected} 
                 />
             </section>
         )

@@ -14,9 +14,4 @@ class SummaryOption extends Component {
     }
   }
   
-  SummaryOption.defaultProps = {
-    // selected: [],
-  };
-  
-  
   export default SummaryOption;

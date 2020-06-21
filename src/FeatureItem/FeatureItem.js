@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 class FeatureItem extends Component {
    
-    
     render() {
         const {feature, item} = this.props;
         return (
@@ -24,7 +23,6 @@ class FeatureItem extends Component {
   }
   
   FeatureItem.defaultProps = {
-    selected: {},
     handleUpdate: () => {}
   };
   
