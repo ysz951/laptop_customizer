@@ -23,7 +23,8 @@ class FeatureItem extends Component {
   }
   
   FeatureItem.defaultProps = {
-    handleUpdate: () => {}
+    handleUpdate: () => {},
+    item: {},
   };
   
   

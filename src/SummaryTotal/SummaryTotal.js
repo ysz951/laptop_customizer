@@ -22,6 +22,7 @@ class SummaryTotal extends Component {
   
   SummaryTotal.defaultProps = {
     selected: {},
+    USCurrencyFormat: new Intl.NumberFormat(),
   };
   
   
